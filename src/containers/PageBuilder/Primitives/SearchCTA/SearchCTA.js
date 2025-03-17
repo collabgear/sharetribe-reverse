@@ -75,14 +75,14 @@ export const SearchCTA = React.forwardRef((props, ref) => {
   const categoriesMaybe =
     categories && categoryConfig.categories.length > 0 ? (
       <div className={css.filterField}>
-        {/* <FilterCategories categories={categoryConfig.categories}/> */}
+        <FilterCategories categories={categoryConfig.categories} />
       </div>
     ) : null;
   const locationMaybe = locationSearch ? (
     <div className={css.filterField}>{/* <FilterLocation /> */}</div>
   ) : null;
   const keywordsMaybe = keywordSearch ? (
-    <div className={css.filterField}>{<FilterKeyword />}</div>
+    <div className={css.filterField}>{/* <FilterKeyword /> */}</div>
   ) : null;
   const dateRangeMaybe = dateRange ? (
     <div className={css.filterField}>{/* <FilterDateRange /> */}</div>
@@ -96,6 +96,7 @@ export const SearchCTA = React.forwardRef((props, ref) => {
         render={({ fieldRenderProps, handleSubmit }) => {
           return (
             <Form
+              role="search"
               onSubmit={handleSubmit}
               className={classNames(css.gridContainer, getGridCount(fieldCountForGrid))}
             >
