@@ -191,3 +191,8 @@ export const userTypes = [
     label: 'Host',
   },
 ];
+
+export const userRoles = {
+  freelancerRoleName: 'talent',
+  customerRoleName: 'employer',
+};

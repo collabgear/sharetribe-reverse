@@ -175,7 +175,9 @@ const TopbarComponent = props => {
       ...currentSearchParams,
       ...topbarSearchParams(),
     };
-    history.push(createResourceLocatorString('SearchPage', routeConfiguration, {}, searchParams));
+    history.push(createResourceLocatorString(
+      'SearchPage', routeConfiguration, { listingType: values.listingType }, searchParams)
+    );
   };
 
   const handleLogout = () => {

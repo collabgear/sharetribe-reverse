@@ -171,6 +171,16 @@
   display: flex;
 }
 
+.listingTypeSelect {
+  width: 150px;
+  margin-top: 12px;
+  margin-right: 15px;
+}
+
+.listingTypeSelectField {
+  width: 150px;
+}
+
 .searchSubmit {
   border: 0;
   padding: 0;

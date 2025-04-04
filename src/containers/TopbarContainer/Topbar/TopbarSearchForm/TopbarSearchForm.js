@@ -5,17 +5,38 @@ import classNames from 'classnames';
 import { useIntl } from '../../../../util/reactIntl';
 import { isMainSearchTypeKeywords } from '../../../../util/search';
 
-import { Form, LocationAutocompleteInput } from '../../../../components';
+import { Form, LocationAutocompleteInput, FieldSelect } from '../../../../components';
 
 import IconSearchDesktop from './IconSearchDesktop';
 import css from './TopbarSearchForm.module.css';
+import { useConfiguration } from '../../../../context/configurationContext';
 
 const identity = v => v;
 
 const KeywordSearchField = props => {
   const { keywordSearchWrapperClasses, iconClass, intl, isMobile = false, inputRef } = props;
+  const config = useConfiguration();
+  const { listingTypes } = config.listing;
+
   return (
     <div className={keywordSearchWrapperClasses}>
+      <FieldSelect
+        id="listingType"
+        name="listingType"
+        className={css.listingTypeSelect}
+        selectClassName={css.listingTypeSelectField}
+      >
+        <option disabled value="">
+          {intl.formatMessage({ id: 'TopbarSearchForm.listingTypePlaceholder'})}
+        </option>
+        <option value={listingTypes[ 0 ].listingType}>
+          {intl.formatMessage({ id: 'TopbarSearchForm.listingTypeFreelancer'})}
+        </option>
+        <option value={listingTypes[ 1 ].listingType}>
+          {intl.formatMessage({ id: 'TopbarSearchForm.listingTypeJob' })}
+        </option>
+      </FieldSelect>
+
       <button className={css.searchSubmit}>
         <div className={iconClass}>
           <IconSearchDesktop />
@@ -113,7 +134,7 @@ const TopbarSearchForm = props => {
 
   const onKeywordSubmit = values => {
     if (isMainSearchTypeKeywords(appConfig)) {
-      onSubmit({ keywords: values.keywords });
+      onSubmit({ keywords: values.keywords, listingType: values.listingType || 'job'});
       // blur search input to hide software keyboard
       searchInpuRef?.current?.blur();
     }

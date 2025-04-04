@@ -268,19 +268,49 @@ export const listingFields = [
 
 export const listingTypes = [
   {
-    listingType: 'daily-booking',
-    label: 'Daily booking',
+    listingType: 'freelancer-profile',
+    label: 'Talent professional profile',
     transactionType: {
-      process: 'default-booking',
-      alias: 'default-booking/release-1',
-      unitType: 'day',
+      process: 'default-inquiry',
+      alias: 'default-inquiry/release-1',
+      unitType: 'inquiry',
     },
-    availabilityType: 'oneSeat',
     defaultListingFields: {
-      location: true,
-      payoutDetails: true,
-    },
+      price: false,
+      location: false,
+    }
   },
+
+  {
+    listingType: 'job',
+    label: 'Project',
+    transactionType: {
+      process: 'default-hire',
+      alias: 'default-hire/release-1',
+      unitType: 'item',
+    },
+    stockType: 'oneItem',
+    defaultListingFields: {
+      shipping: false,
+      pickup: false,
+      payoutDetails: true,
+    }
+  },
+
+  // {
+  //   listingType: 'daily-booking',
+  //   label: 'Daily booking',
+  //   transactionType: {
+  //     process: 'default-booking',
+  //     alias: 'default-booking/release-1',
+  //     unitType: 'day',
+  //   },
+  //   availabilityType: 'oneSeat',
+  //   defaultListingFields: {
+  //     location: true,
+  //     payoutDetails: true,
+  //   },
+  // },
   // // Here are some examples for other listingTypes
   // // TODO: SearchPage does not work well if both booking and product selling are used at the same time
   // {
