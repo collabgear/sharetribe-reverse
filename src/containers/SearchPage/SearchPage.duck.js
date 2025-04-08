@@ -318,6 +318,7 @@ export const loadData = (params, search, config) => (dispatch, getState, sdk) =>
     {
       ...rest,
       ...originMaybe,
+      pub_listingType: params.listingType,
       page,
       perPage: RESULT_PAGE_SIZE,
       include: ['author', 'images'],

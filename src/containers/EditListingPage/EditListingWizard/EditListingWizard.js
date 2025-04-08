@@ -657,6 +657,7 @@ class EditListingWizard extends Component {
                 disabled={isNewListingFlow && !tabsStatus[tab]}
                 tab={tab}
                 params={params}
+                currentUser={ensuredCurrentUser}
                 listing={listing}
                 marketplaceTabs={tabs}
                 errors={errors}

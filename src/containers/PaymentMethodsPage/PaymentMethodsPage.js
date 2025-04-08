@@ -167,7 +167,7 @@ const PaymentMethodsPageComponent = props => {
               desktopClassName={css.desktopTopbar}
               mobileClassName={css.mobileTopbar}
             />
-            <UserNav currentPage="PaymentMethodsPage" />
+            <UserNav currentPage="PaymentMethodsPage" currentUser={currentUser} />
           </>
         }
         sideNav={null}

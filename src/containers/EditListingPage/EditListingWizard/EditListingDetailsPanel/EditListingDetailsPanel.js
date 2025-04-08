@@ -221,13 +221,16 @@ const getInitialValues = (
   categoryKey
 ) => {
   const { description, title, publicData, privateData } = props?.listing?.attributes || {};
-  const { listingType } = publicData;
+  const { publicData: userPublicData = {}} = props?.currentUser?.attributes.profile || {};
+  const { userType } = userPublicData;
+  const listingType = userType === 'employer' ? 'job' : 'freelancer-profile';
 
   const nestedCategories = pickCategoryFields(publicData, categoryKey, 1, listingCategories);
   // Initial values for the form
   return {
     title,
     description,
+    listingType,
     ...nestedCategories,
     // Transaction type info: listingType, transactionProcessAlias, unitType
     ...getTransactionInfo(listingTypes, existingListingTypeInfo),
@@ -271,6 +274,7 @@ const EditListingDetailsPanel = props => {
   const {
     className,
     rootClassName,
+    currentUser,
     listing,
     disabled,
     ready,
@@ -324,7 +328,11 @@ const EditListingDetailsPanel = props => {
           />
         ) : (
           <FormattedMessage
-            id="EditListingDetailsPanel.createListingTitle"
+            id={
+              initialValues.listingType === 'job' ?
+                "EditListingDetailsPanel.createJobListingTitle" :
+                "EditListingDetailsPanel.createProfileListingTitle"
+            }
             values={{ lineBreak: <br /> }}
           />
         )}

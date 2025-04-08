@@ -60,70 +60,10 @@ const FieldHidden = props => {
 // - listingType              Set of predefined configurations for each listing type
 // - transactionProcessAlias  Initiate correct transaction against Marketplace API
 // - unitType                 Main use case: pricing unit
-const FieldSelectListingType = props => {
-  const {
-    name,
-    listingTypes,
-    hasExistingListingType,
-    onListingTypeChange,
-    formApi,
-    formId,
-    intl,
-  } = props;
-  const hasMultipleListingTypes = listingTypes?.length > 1;
+const FieldHiddenListingType = props => {
+  const { name } = props;
 
-  const handleOnChange = value => {
-    const selectedListingType = listingTypes.find(config => config.listingType === value);
-    formApi.change('transactionProcessAlias', selectedListingType.transactionProcessAlias);
-    formApi.change('unitType', selectedListingType.unitType);
-
-    if (onListingTypeChange) {
-      onListingTypeChange(selectedListingType);
-    }
-  };
-  const getListingTypeLabel = listingType => {
-    const listingTypeConfig = listingTypes.find(config => config.listingType === listingType);
-    return listingTypeConfig ? listingTypeConfig.label : listingType;
-  };
-
-  return hasMultipleListingTypes && !hasExistingListingType ? (
-    <>
-      <FieldSelect
-        id={formId ? `${formId}.${name}` : name}
-        name={name}
-        className={css.listingTypeSelect}
-        label={intl.formatMessage({ id: 'EditListingDetailsForm.listingTypeLabel' })}
-        validate={required(
-          intl.formatMessage({ id: 'EditListingDetailsForm.listingTypeRequired' })
-        )}
-        onChange={handleOnChange}
-      >
-        <option disabled value="">
-          {intl.formatMessage({ id: 'EditListingDetailsForm.listingTypePlaceholder' })}
-        </option>
-        {listingTypes.map(config => {
-          const type = config.listingType;
-          return (
-            <option key={type} value={type}>
-              {config.label}
-            </option>
-          );
-        })}
-      </FieldSelect>
-      <FieldHidden name="transactionProcessAlias" />
-      <FieldHidden name="unitType" />
-    </>
-  ) : hasMultipleListingTypes && hasExistingListingType ? (
-    <div className={css.listingTypeSelect}>
-      <Heading as="h5" rootClassName={css.selectedLabel}>
-        {intl.formatMessage({ id: 'EditListingDetailsForm.listingTypeLabel' })}
-      </Heading>
-      <p className={css.selectedValue}>{getListingTypeLabel(formApi.getFieldState(name)?.value)}</p>
-      <FieldHidden name={name} />
-      <FieldHidden name="transactionProcessAlias" />
-      <FieldHidden name="unitType" />
-    </div>
-  ) : (
+  return (
     <>
       <FieldHidden name={name} />
       <FieldHidden name="transactionProcessAlias" />
@@ -301,177 +241,183 @@ const AddListingFields = props => {
  * @param {Function} props.onSubmit - The submit function
  * @returns {JSX.Element}
  */
-const EditListingDetailsForm = props => (
-  <FinalForm
-    {...props}
-    mutators={{ ...arrayMutators }}
-    render={formRenderProps => {
-      const {
-        autoFocus,
-        className,
-        disabled,
-        ready,
-        formId = 'EditListingDetailsForm',
-        form: formApi,
-        handleSubmit,
-        onListingTypeChange,
-        invalid,
-        pristine,
-        marketplaceCurrency,
-        marketplaceName,
-        selectableListingTypes,
-        selectableCategories,
-        hasExistingListingType = false,
-        pickSelectedCategories,
-        categoryPrefix,
-        saveActionMsg,
-        updated,
-        updateInProgress,
-        fetchErrors,
-        listingFieldsConfig = [],
-        listingCurrency,
-        values,
-      } = formRenderProps;
+const EditListingDetailsForm = props => {
+  useEffect(() => {
+    props.onListingTypeChange( props.initialValues.listingType );
+  }, []);
 
-      const intl = useIntl();
-      const { listingType, transactionProcessAlias, unitType } = values;
-      const [allCategoriesChosen, setAllCategoriesChosen] = useState(false);
+  return (
+    <FinalForm
+      {...props}
+      mutators={{ ...arrayMutators }}
+      render={formRenderProps => {
+        const {
+          autoFocus,
+          className,
+          disabled,
+          ready,
+          formId = 'EditListingDetailsForm',
+          form: formApi,
+          handleSubmit,
+          invalid,
+          pristine,
+          marketplaceCurrency,
+          marketplaceName,
+          selectableListingTypes,
+          selectableCategories,
+          pickSelectedCategories,
+          categoryPrefix,
+          saveActionMsg,
+          updated,
+          updateInProgress,
+          fetchErrors,
+          listingFieldsConfig = [],
+          listingCurrency,
+          values,
+        } = formRenderProps;
 
-      const titleRequiredMessage = intl.formatMessage({
-        id: 'EditListingDetailsForm.titleRequired',
-      });
-      const maxLengthMessage = intl.formatMessage(
-        { id: 'EditListingDetailsForm.maxLength' },
-        {
-          maxLength: TITLE_MAX_LENGTH,
-        }
-      );
+        const intl = useIntl();
+        const { listingType, transactionProcessAlias, unitType } = values;
+        const [allCategoriesChosen, setAllCategoriesChosen] = useState(false);
 
-      // Determine the currency to validate:
-      // - If editing an existing listing, use the listing's currency.
-      // - If creating a new listing, fall back to the default marketplace currency.
-      const currencyToCheck = listingCurrency || marketplaceCurrency;
+        const titleRequiredMessage = intl.formatMessage({
+          id: 'EditListingDetailsForm.titleRequired',
+        });
+        const maxLengthMessage = intl.formatMessage(
+          { id: 'EditListingDetailsForm.maxLength' },
+          {
+            maxLength: TITLE_MAX_LENGTH,
+          }
+        );
 
-      // Verify if the selected listing type's transaction process supports the chosen currency.
-      // This checks compatibility between the transaction process
-      // and the marketplace or listing currency.
-      const isCompatibleCurrency = isValidCurrencyForTransactionProcess(
-        transactionProcessAlias,
-        currencyToCheck
-      );
+        // Determine the currency to validate:
+        // - If editing an existing listing, use the listing's currency.
+        // - If creating a new listing, fall back to the default marketplace currency.
+        const currencyToCheck = listingCurrency || marketplaceCurrency;
 
-      const maxLength60Message = maxLength(maxLengthMessage, TITLE_MAX_LENGTH);
+        // Verify if the selected listing type's transaction process supports the chosen currency.
+        // This checks compatibility between the transaction process
+        // and the marketplace or listing currency.
+        const isCompatibleCurrency = isValidCurrencyForTransactionProcess(
+          transactionProcessAlias,
+          currencyToCheck
+        );
 
-      const hasCategories = selectableCategories && selectableCategories.length > 0;
-      const showCategories = listingType && hasCategories;
+        const maxLength60Message = maxLength(maxLengthMessage, TITLE_MAX_LENGTH);
 
-      const showTitle = hasCategories ? allCategoriesChosen : listingType;
-      const showDescription = hasCategories ? allCategoriesChosen : listingType;
-      const showListingFields = hasCategories ? allCategoriesChosen : listingType;
+        const hasCategories = selectableCategories && selectableCategories.length > 0;
+        const showCategories = listingType && hasCategories;
 
-      const classes = classNames(css.root, className);
-      const submitReady = (updated && pristine) || ready;
-      const submitInProgress = updateInProgress;
-      const hasMandatoryListingTypeData = listingType && transactionProcessAlias && unitType;
-      const submitDisabled =
-        invalid ||
-        disabled ||
-        submitInProgress ||
-        !hasMandatoryListingTypeData ||
-        !isCompatibleCurrency;
+        const showTitle = hasCategories ? allCategoriesChosen : listingType;
+        const showDescription = hasCategories ? allCategoriesChosen : listingType;
+        const showListingFields = hasCategories ? allCategoriesChosen : listingType;
 
-      return (
-        <Form className={classes} onSubmit={handleSubmit}>
-          <ErrorMessage fetchErrors={fetchErrors} />
+        const classes = classNames(css.root, className);
+        const submitReady = (updated && pristine) || ready;
+        const submitInProgress = updateInProgress;
+        const hasMandatoryListingTypeData = !!listingType;
+        const submitDisabled =
+          invalid ||
+          disabled ||
+          submitInProgress ||
+          !hasMandatoryListingTypeData ||
+          !isCompatibleCurrency;
 
-          <FieldSelectListingType
-            name="listingType"
-            listingTypes={selectableListingTypes}
-            hasExistingListingType={hasExistingListingType}
-            onListingTypeChange={onListingTypeChange}
-            formApi={formApi}
-            formId={formId}
-            intl={intl}
-          />
+        return (
+          <Form
+            className={classes}
+            onSubmit={ e => {
+              const selectedListingType =
+                selectableListingTypes.find(config => config.listingType === values.listingType);
+              formApi.change('transactionProcessAlias', selectedListingType.transactionProcessAlias);
+              formApi.change('unitType', selectedListingType.unitType);
 
-          {showCategories && isCompatibleCurrency && (
-            <FieldSelectCategory
-              values={values}
-              prefix={categoryPrefix}
-              listingCategories={selectableCategories}
-              formApi={formApi}
-              intl={intl}
-              allCategoriesChosen={allCategoriesChosen}
-              setAllCategoriesChosen={setAllCategoriesChosen}
-            />
-          )}
-
-          {showTitle && isCompatibleCurrency && (
-            <FieldTextInput
-              id={`${formId}title`}
-              name="title"
-              className={css.title}
-              type="text"
-              label={intl.formatMessage({ id: 'EditListingDetailsForm.title' })}
-              placeholder={intl.formatMessage({
-                id: 'EditListingDetailsForm.titlePlaceholder',
-              })}
-              maxLength={TITLE_MAX_LENGTH}
-              validate={composeValidators(required(titleRequiredMessage), maxLength60Message)}
-              autoFocus={autoFocus}
-            />
-          )}
-
-          {showDescription && isCompatibleCurrency && (
-            <FieldTextInput
-              id={`${formId}description`}
-              name="description"
-              className={css.description}
-              type="textarea"
-              label={intl.formatMessage({ id: 'EditListingDetailsForm.description' })}
-              placeholder={intl.formatMessage({
-                id: 'EditListingDetailsForm.descriptionPlaceholder',
-              })}
-              validate={required(
-                intl.formatMessage({
-                  id: 'EditListingDetailsForm.descriptionRequired',
-                })
-              )}
-            />
-          )}
-
-          {showListingFields && isCompatibleCurrency && (
-            <AddListingFields
-              listingType={listingType}
-              listingFieldsConfig={listingFieldsConfig}
-              selectedCategories={pickSelectedCategories(values)}
-              formId={formId}
-              intl={intl}
-            />
-          )}
-
-          {!isCompatibleCurrency && listingType && (
-            <p className={css.error}>
-              <FormattedMessage
-                id="EditListingDetailsForm.incompatibleCurrency"
-                values={{ marketplaceName, marketplaceCurrency }}
-              />
-            </p>
-          )}
-
-          <Button
-            className={css.submitButton}
-            type="submit"
-            inProgress={submitInProgress}
-            disabled={submitDisabled}
-            ready={submitReady}
+              handleSubmit( e );
+            }}
           >
-            {saveActionMsg}
-          </Button>
-        </Form>
-      );
-    }}
-  />
-);
+            <ErrorMessage fetchErrors={fetchErrors}/>
+
+            <FieldHiddenListingType name="listingType"/>
+
+            {showCategories && isCompatibleCurrency && (
+              <FieldSelectCategory
+                values={values}
+                prefix={categoryPrefix}
+                listingCategories={selectableCategories}
+                formApi={formApi}
+                intl={intl}
+                allCategoriesChosen={allCategoriesChosen}
+                setAllCategoriesChosen={setAllCategoriesChosen}
+              />
+            )}
+
+            {showTitle && isCompatibleCurrency && (
+              <FieldTextInput
+                id={`${formId}title`}
+                name="title"
+                className={css.title}
+                type="text"
+                label={intl.formatMessage({ id: 'EditListingDetailsForm.title' })}
+                placeholder={intl.formatMessage({
+                  id: 'EditListingDetailsForm.titlePlaceholder',
+                })}
+                maxLength={TITLE_MAX_LENGTH}
+                validate={composeValidators(required(titleRequiredMessage), maxLength60Message)}
+                autoFocus={autoFocus}
+              />
+            )}
+
+            {showDescription && isCompatibleCurrency && (
+              <FieldTextInput
+                id={`${formId}description`}
+                name="description"
+                className={css.description}
+                type="textarea"
+                label={intl.formatMessage({ id: 'EditListingDetailsForm.description' })}
+                placeholder={intl.formatMessage({
+                  id: 'EditListingDetailsForm.descriptionPlaceholder',
+                })}
+                validate={required(
+                  intl.formatMessage({
+                    id: 'EditListingDetailsForm.descriptionRequired',
+                  })
+                )}
+              />
+            )}
+
+            {showListingFields && isCompatibleCurrency && (
+              <AddListingFields
+                listingType={listingType}
+                listingFieldsConfig={listingFieldsConfig}
+                selectedCategories={pickSelectedCategories(values)}
+                formId={formId}
+                intl={intl}
+              />
+            )}
+
+            {!isCompatibleCurrency && listingType && (
+              <p className={css.error}>
+                <FormattedMessage
+                  id="EditListingDetailsForm.incompatibleCurrency"
+                  values={{ marketplaceName, marketplaceCurrency }}
+                />
+              </p>
+            )}
+
+            <Button
+              className={css.submitButton}
+              type="submit"
+              inProgress={submitInProgress}
+              disabled={submitDisabled}
+              ready={submitReady}
+            >
+              {saveActionMsg}
+            </Button>
+          </Form>
+        );
+      }}
+    />
+  );
+};
 
 export default EditListingDetailsForm;

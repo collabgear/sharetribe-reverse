@@ -100,12 +100,16 @@ const calculateContainerWidth = (containerRefTarget, parentWidth) => {
  * @param {*} props contains currentPage, customLinks, intl, and hasClientSideContentReady
  * @returns component to be placed inside TopbarDesktop
  */
-const CustomLinksMenu = ({ currentPage, customLinks = [], hasClientSideContentReady, intl }) => {
+const CustomLinksMenu = ({ currentPage, currentUser, customLinks = [], hasClientSideContentReady, intl }) => {
   const containerRef = useRef(null);
   const observer = useRef(null);
   const [mounted, setMounted] = useState(false);
   const [moreLabelWidth, setMoreLabelWidth] = useState(0);
-  const [links, setLinks] = useState([createListingLinkConfig(intl), ...customLinks]);
+  const userRole = currentUser?.attributes?.profile?.publicData?.userType;
+  const [links, setLinks] =
+    userRole === 'employer' ?
+      useState([createListingLinkConfig(intl), ...customLinks]) :
+      useState([...customLinks]);
   const [layoutData, setLayoutData] = useState({
     priorityLinks: links,
     menuLinks: links,

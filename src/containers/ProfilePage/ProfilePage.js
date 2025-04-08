@@ -213,6 +213,8 @@ export const MainContent = props => {
     hideReviews,
   } = props;
 
+  const userType = publicData?.userType;
+
   const hasListings = listings.length > 0;
   const hasMatchMedia = typeof window !== 'undefined' && window?.matchMedia;
   const isMobileLayout =
@@ -257,7 +259,13 @@ export const MainContent = props => {
       {hasListings ? (
         <div className={listingsContainerClasses}>
           <H4 as="h2" className={css.listingsTitle}>
-            <FormattedMessage id="ProfilePage.listingsTitle" values={{ count: listings.length }} />
+            <FormattedMessage
+              id={ userType === 'employer' ?
+                "ProfilePage.jobListingsTitle" :
+                "ProfilePage.profileListingTitle"
+              }
+              values={{ count: listings.length }}
+            />
           </H4>
           <ul className={css.listings}>
             {listings.map(l => (

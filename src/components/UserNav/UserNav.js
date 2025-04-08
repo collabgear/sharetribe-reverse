@@ -17,17 +17,11 @@ import css from './UserNav.module.css';
  * @returns {JSX.Element} User navigation component
  */
 const UserNav = props => {
-  const { className, rootClassName, currentPage } = props;
+  const { className, rootClassName, currentPage, currentUser } = props;
+  const userType = currentUser?.attributes?.profile?.publicData?.userType;
   const classes = classNames(rootClassName || css.root, className);
 
   const tabs = [
-    {
-      text: <FormattedMessage id="UserNav.yourListings" />,
-      selected: currentPage === 'ManageListingsPage',
-      linkProps: {
-        name: 'ManageListingsPage',
-      },
-    },
     {
       text: <FormattedMessage id="UserNav.profileSettings" />,
       selected: currentPage === 'ProfileSettingsPage',
@@ -45,6 +39,14 @@ const UserNav = props => {
       },
     },
   ];
+
+  if( userType === 'employer') {
+    tabs.splice( 0, 0, {
+      text: <FormattedMessage id="UserNav.yourListings"/>,
+      selected: currentPage === 'ManageListingsPage',
+      linkProps: { name: 'ManageListingsPage'}
+    });
+  }
 
   return (
     <LinkTabNavHorizontal className={classes} tabRootClassName={css.tab} tabs={tabs} skin="dark" />

@@ -176,7 +176,7 @@ export const StripePayoutPageComponent = props => {
               desktopClassName={css.desktopTopbar}
               mobileClassName={css.mobileTopbar}
             />
-            <UserNav currentPage="StripePayoutPage" />
+            <UserNav currentPage="StripePayoutPage" currentUser={currentUser} />
           </>
         }
         sideNav={null}

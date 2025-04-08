@@ -293,6 +293,7 @@ export class SearchPageComponent extends Component {
         totalItems={totalItems}
         location={location}
         resetAll={this.resetAll}
+        currentUser={this.props.currentUser}
       />
     );
 
@@ -496,6 +497,7 @@ const EnhancedSearchPage = props => {
       intl={intl}
       history={history}
       location={location}
+      currentUser={currentUser}
       {...restOfProps}
     />
   );

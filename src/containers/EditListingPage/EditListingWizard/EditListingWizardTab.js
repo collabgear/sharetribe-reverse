@@ -89,6 +89,7 @@ const EditListingWizardTab = props => {
     handlePublishListing,
     history,
     images,
+    currentUser,
     listing,
     weeklyExceptionQueries,
     monthlyExceptionQueries,
@@ -164,6 +165,7 @@ const EditListingWizardTab = props => {
     return {
       className: css.panel,
       errors,
+      currentUser,
       listing,
       panelUpdated: updatedTab === tab,
       params,

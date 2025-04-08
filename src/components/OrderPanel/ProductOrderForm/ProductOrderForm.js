@@ -60,8 +60,8 @@ const DeliveryMethodMaybe = props => {
     formId,
     intl,
   } = props;
-  const showDeliveryMethodSelector = displayDeliveryMethod && hasMultipleDeliveryMethods;
-  const showSingleDeliveryMethod = displayDeliveryMethod && deliveryMethod;
+  const showDeliveryMethodSelector = false;
+  const showSingleDeliveryMethod = false;
   return !hasStock ? null : showDeliveryMethodSelector ? (
     <FieldSelect
       id={`${formId}.deliveryMethod`}
@@ -171,6 +171,11 @@ const renderForm = formRenderProps => {
   // In case quantity and deliveryMethod are missing focus on that select-input.
   // Otherwise continue with the default handleSubmit function.
   const handleFormSubmit = e => {
+
+    console.log('handleFormSubmit');
+
+    return null;
+
     const { quantity, deliveryMethod } = values || {};
     if (!quantity || quantity < 1) {
       e.preventDefault();

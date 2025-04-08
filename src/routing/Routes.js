@@ -145,7 +145,9 @@ class RouteComponentRenderer extends Component {
   }
 
   render() {
-    const { route, match, location, staticContext = {}, currentUser } = this.props;
+    const {
+      route, match, location, staticContext = {}, currentUser, currentUserHasAnyListings
+    } = this.props;
     const { component: RouteComponent, authPage = 'SignupPage', extraProps } = route;
     const canShow = canShowComponent(this.props);
     if (!canShow) {
@@ -156,7 +158,15 @@ class RouteComponentRenderer extends Component {
     const restrictedPageWithCurrentUser = !canShow && hasCurrentUser;
     // Banned users are redirected to LandingPage
     const isBannedFromAuthPages = restrictedPageWithCurrentUser && isBanned(currentUser);
-    return canShow ? (
+
+    const userRole = currentUser?.attributes?.profile?.publicData?.userType;
+    const lp = location.pathname;
+    const validNewTalentPath =
+      lp.startsWith('/l/') || lp.startsWith('/no-posting-rights') || lp.startsWith('/signup');
+
+    return userRole === 'talent' && !currentUserHasAnyListings && !validNewTalentPath  ? (
+      <NamedRedirect name="NewListingPage" />
+    ) : canShow ? (
       <LoadableComponentErrorBoundary>
         <RouteComponent
           params={match.params}
@@ -178,8 +188,11 @@ class RouteComponentRenderer extends Component {
 
 const mapStateToProps = state => {
   const { isAuthenticated, logoutInProgress } = state.auth;
-  const { currentUser } = state.user;
-  return { isAuthenticated, logoutInProgress, currentUser };
+  const { currentUser, currentUserHasListings, currentUserHasAnyListings } = state.user;
+  return {
+    isAuthenticated, logoutInProgress, currentUser,
+    currentUserHasListings, currentUserHasAnyListings
+  };
 };
 const RouteComponentContainer = compose(connect(mapStateToProps))(RouteComponentRenderer);
 

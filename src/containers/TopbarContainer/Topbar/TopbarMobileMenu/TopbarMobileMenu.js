@@ -79,6 +79,7 @@ const TopbarMobileMenu = props => {
   } = props;
 
   const user = ensureCurrentUser(currentUser);
+  const userRole = currentUser?.attributes?.profile?.publicData?.userType;
 
   const extraLinks = customLinks.map((linkConfig, index) => {
     return (
@@ -122,11 +123,13 @@ const TopbarMobileMenu = props => {
 
           <div className={css.spacer} />
         </div>
-        <div className={css.footer}>
-          <NamedLink className={css.createNewListingLink} name="NewListingPage">
-            <FormattedMessage id="TopbarMobileMenu.newListingLink" />
-          </NamedLink>
-        </div>
+        { userRole === 'employer' ? (
+          <div className={css.footer}>
+            <NamedLink className={css.createNewListingLink} name="NewListingPage">
+              <FormattedMessage id="TopbarMobileMenu.newListingLink" />
+            </NamedLink>
+          </div>
+        ) : null }
       </div>
     );
   }
@@ -187,11 +190,13 @@ const TopbarMobileMenu = props => {
         <div className={css.customLinksWrapper}>{extraLinks}</div>
         <div className={css.spacer} />
       </div>
-      <div className={css.footer}>
-        <NamedLink className={css.createNewListingLink} name="NewListingPage">
-          <FormattedMessage id="TopbarMobileMenu.newListingLink" />
-        </NamedLink>
-      </div>
+      { userRole === 'employer' ? (
+        <div className={css.footer}>
+          <NamedLink className={css.createNewListingLink} name="NewListingPage">
+            <FormattedMessage id="TopbarMobileMenu.newListingLink" />
+          </NamedLink>
+        </div>
+      ) : null }
     </div>
   );
 };

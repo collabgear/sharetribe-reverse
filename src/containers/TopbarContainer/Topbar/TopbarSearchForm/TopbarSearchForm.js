@@ -14,7 +14,9 @@ import { useConfiguration } from '../../../../context/configurationContext';
 const identity = v => v;
 
 const KeywordSearchField = props => {
-  const { keywordSearchWrapperClasses, iconClass, intl, isMobile = false, inputRef } = props;
+  const {
+    keywordSearchWrapperClasses, iconClass, intl, isMobile = false, inputRef, listingType
+  } = props;
   const config = useConfiguration();
   const { listingTypes } = config.listing;
 
@@ -54,7 +56,9 @@ const KeywordSearchField = props => {
               ref={inputRef}
               type="text"
               placeholder={intl.formatMessage({
-                id: 'TopbarSearchForm.placeholder',
+                id: listingType === 'job'
+                  ? 'TopbarSearchForm.placeholderJobs'
+                  : 'TopbarSearchForm.placeholderProfiles',
               })}
               autoComplete="off"
             />
@@ -153,6 +157,7 @@ const TopbarSearchForm = props => {
           desktopInputRoot,
           isMobile = false,
           handleSubmit,
+          values,
         } = formRenderProps;
         const classes = classNames(rootClassName, className);
         const desktopInputRootClass = desktopInputRoot || css.desktopInputRoot;
@@ -166,6 +171,8 @@ const TopbarSearchForm = props => {
           isMobile ? css.mobileInputRoot : desktopInputRootClass
         );
 
+        const listingType = values.listingType || 'job';
+
         return (
           <Form className={classes} onSubmit={submitFormFn} enforcePagePreloadFor="SearchPage">
             {isKeywordsSearch ? (
@@ -175,6 +182,7 @@ const TopbarSearchForm = props => {
                 intl={intl}
                 isMobile={isMobile}
                 inputRef={searchInpuRef}
+                listingType={listingType}
               />
             ) : (
               <LocationSearchField

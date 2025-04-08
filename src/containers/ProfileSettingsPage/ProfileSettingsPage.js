@@ -177,7 +177,7 @@ export const ProfileSettingsPageComponent = props => {
         topbar={
           <>
             <TopbarContainer />
-            <UserNav currentPage="ProfileSettingsPage" />
+            <UserNav currentPage="ProfileSettingsPage" currentUser={currentUser} />
           </>
         }
         footer={<FooterContainer />}

@@ -87,6 +87,7 @@ export const ActionBarMaybe = props => {
   const classes = classNames(rootClassName || css.actionBar, className);
 
   const state = listing.attributes.state;
+  const listingType = listing.attributes.publicData.listingType;
   const isPendingApproval = state === LISTING_STATE_PENDING_APPROVAL;
   const isClosed = state === LISTING_STATE_CLOSED;
   const isDraft = state === LISTING_STATE_DRAFT;
@@ -112,14 +113,18 @@ export const ActionBarMaybe = props => {
     let ownListingTextTranslationId = 'ListingPage.ownListing';
 
     if (isPendingApproval) {
-      ownListingTextTranslationId = 'ListingPage.ownListingPendingApproval';
+      ownListingTextTranslationId = listingType === 'job' ?
+        'ListingPage.ownJobListingPendingApproval' :
+        'ListingPage.ownProfileListingPendingApproval';
     } else if (isClosed) {
       ownListingTextTranslationId = 'ListingPage.ownClosedListing';
     } else if (isDraft) {
       ownListingTextTranslationId = 'ListingPage.ownListingDraft';
     }
 
-    const message = isDraft ? 'ListingPage.finishListing' : 'ListingPage.editListing';
+    const message = isDraft ?
+      'ListingPage.finishListing' :
+      listingType === 'job' ? 'ListingPage.editJobListing' : 'ListingPage.editProfileListing';
 
     const ownListingTextClasses = classNames(css.ownListingText, {
       [css.ownListingTextPendingApproval]: isPendingApproval,
