@@ -61,9 +61,74 @@ const FieldHidden = props => {
 // - transactionProcessAlias  Initiate correct transaction against Marketplace API
 // - unitType                 Main use case: pricing unit
 const FieldHiddenListingType = props => {
-  const { name } = props;
+  const {
+    name,
+    listingType,
+    listingTypes,
+    hasExistingListingType,
+    onListingTypeChange,
+    formApi,
+    formId,
+    intl,
+  } = props;
+  const hasMultipleListingTypes = listingTypes?.length > 1;
 
-  return (
+  useEffect(() => {
+    handleOnChange( listingType );
+  }, []);
+
+  const handleOnChange = value => {
+    const selectedListingType = listingTypes.find(config => config.listingType === value);
+    formApi.change('transactionProcessAlias', selectedListingType.transactionProcessAlias);
+    formApi.change('unitType', selectedListingType.unitType);
+
+    if (onListingTypeChange) {
+      onListingTypeChange(selectedListingType);
+    }
+  };
+  const getListingTypeLabel = listingType => {
+    const listingTypeConfig = listingTypes.find(config => config.listingType === listingType);
+    return listingTypeConfig ? listingTypeConfig.label : listingType;
+  };
+
+  return hasMultipleListingTypes && !hasExistingListingType ? (
+    <>
+      <FieldSelect
+        id={formId ? `${formId}.${name}` : name}
+        name={name}
+        className={css.listingTypeHiddenSelect}
+        label={intl.formatMessage({ id: 'EditListingDetailsForm.listingTypeLabel' })}
+        validate={required(
+          intl.formatMessage({ id: 'EditListingDetailsForm.listingTypeRequired' })
+        )}
+        onChange={handleOnChange}
+      >
+        <option disabled value="">
+          {intl.formatMessage({ id: 'EditListingDetailsForm.listingTypePlaceholder' })}
+        </option>
+        {listingTypes.map(config => {
+          const type = config.listingType;
+          return (
+            <option key={type} value={type}>
+              {config.label}
+            </option>
+          );
+        })}
+      </FieldSelect>
+      <FieldHidden name="transactionProcessAlias" />
+      <FieldHidden name="unitType" />
+    </>
+  ) : hasMultipleListingTypes && hasExistingListingType ? (
+    <div className={css.listingTypeSelect}>
+      <Heading as="h5" rootClassName={css.selectedLabel}>
+        {intl.formatMessage({ id: 'EditListingDetailsForm.listingTypeLabel' })}
+      </Heading>
+      <p className={css.selectedValue}>{getListingTypeLabel(formApi.getFieldState(name)?.value)}</p>
+      <FieldHidden name={name} />
+      <FieldHidden name="transactionProcessAlias" />
+      <FieldHidden name="unitType" />
+    </div>
+  ) : (
     <>
       <FieldHidden name={name} />
       <FieldHidden name="transactionProcessAlias" />
@@ -242,10 +307,6 @@ const AddListingFields = props => {
  * @returns {JSX.Element}
  */
 const EditListingDetailsForm = props => {
-  useEffect(() => {
-    props.onListingTypeChange( props.initialValues.listingType );
-  }, []);
-
   return (
     <FinalForm
       {...props}
@@ -266,6 +327,8 @@ const EditListingDetailsForm = props => {
           selectableListingTypes,
           selectableCategories,
           pickSelectedCategories,
+          hasExistingListingType = false,
+          onListingTypeChange,
           categoryPrefix,
           saveActionMsg,
           updated,
@@ -337,7 +400,16 @@ const EditListingDetailsForm = props => {
           >
             <ErrorMessage fetchErrors={fetchErrors}/>
 
-            <FieldHiddenListingType name="listingType"/>
+            <FieldHiddenListingType
+              name="listingType"
+              listingTypes={selectableListingTypes}
+              listingType={props.initialValues.listingType}
+              hasExistingListingType={hasExistingListingType}
+              onListingTypeChange={onListingTypeChange}
+              formApi={formApi}
+              formId={formId}
+              intl={intl}
+            />
 
             {showCategories && isCompatibleCurrency && (
               <FieldSelectCategory

@@ -387,13 +387,16 @@ class EditListingWizard extends Component {
   constructor(props) {
     super(props);
 
+    const { currentUser } = props;
+    const userType = currentUser?.attributes?.profile?.publicData?.userType;
+
     // Having this info in state would trigger unnecessary rerendering
     this.hasScrolledToTab = false;
 
     this.state = {
       draftId: null,
       showPayoutDetails: false,
-      selectedListingType: null,
+      selectedListingType: userType === 'talent' ? 'freelancer-profile' : 'job',
       mounted: false,
     };
     this.handleCreateFlowTabScrolling = this.handleCreateFlowTabScrolling.bind(this);
