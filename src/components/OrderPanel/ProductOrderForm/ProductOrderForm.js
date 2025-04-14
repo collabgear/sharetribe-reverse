@@ -278,6 +278,15 @@ const renderForm = formRenderProps => {
         </div>
       ) : null}
 
+      <FieldTextInput
+        id={`${formId}.budgetOffer`}
+        className={css.budgetOfferField}
+        name="budgetOffer"
+        type="number"
+        label={intl.formatMessage({ id: "ProductOrderForm.budgetOfferLabel"})}
+        placeholder={intl.formatMessage({ id: "ProductOrderForm.budgetOfferPlaceholder"})}
+      />
+
       <div className={css.submitButton}>
         <PrimaryButton type="submit" inProgress={submitInProgress} disabled={submitDisabled}>
           {hasStock ? (
