@@ -145,9 +145,8 @@ class RouteComponentRenderer extends Component {
   }
 
   render() {
-    const {
-      route, match, location, staticContext = {}, currentUser, currentUserHasAnyListings
-    } = this.props;
+    const { route, match, location, staticContext = {}, currentUser,
+            currentUserHasAnyListings, currentUserHasAnyListingsFetched } = this.props;
     const { component: RouteComponent, authPage = 'SignupPage', extraProps } = route;
     const canShow = canShowComponent(this.props);
     if (!canShow) {
@@ -163,8 +162,10 @@ class RouteComponentRenderer extends Component {
     const lp = location.pathname;
     const validNewTalentPath =
       lp.startsWith('/l/') || lp.startsWith('/no-posting-rights') || lp.startsWith('/signup');
+    const shouldCreateTalentProfile = userRole === 'talent' &&
+      currentUserHasAnyListingsFetched && !currentUserHasAnyListings && !validNewTalentPath;
 
-    return userRole === 'talent' && !currentUserHasAnyListings && !validNewTalentPath  ? (
+    return shouldCreateTalentProfile ? (
       <NamedRedirect name="NewListingPage" />
     ) : canShow ? (
       <LoadableComponentErrorBoundary>
@@ -188,10 +189,11 @@ class RouteComponentRenderer extends Component {
 
 const mapStateToProps = state => {
   const { isAuthenticated, logoutInProgress } = state.auth;
-  const { currentUser, currentUserHasListings, currentUserHasAnyListings } = state.user;
+  const { currentUser, currentUserHasListings, currentUserHasAnyListings,
+          currentUserHasAnyListingsFetched } = state.user;
   return {
     isAuthenticated, logoutInProgress, currentUser,
-    currentUserHasListings, currentUserHasAnyListings
+    currentUserHasListings, currentUserHasAnyListings, currentUserHasAnyListingsFetched
   };
 };
 const RouteComponentContainer = compose(connect(mapStateToProps))(RouteComponentRenderer);

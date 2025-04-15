@@ -42,6 +42,7 @@ const EditListingPhotosPanel = props => {
   const {
     className,
     rootClassName,
+    currentUser,
     errors,
     disabled,
     ready,
@@ -76,6 +77,7 @@ const EditListingPhotosPanel = props => {
       </H3>
       <EditListingPhotosForm
         className={css.form}
+        currentUser={currentUser}
         disabled={disabled}
         ready={ready}
         fetchErrors={errors}

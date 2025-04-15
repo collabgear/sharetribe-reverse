@@ -71,6 +71,7 @@ const initialState = {
   currentUserHasListings: false,
   currentUserHasListingsError: null,
   currentUserHasAnyListings: false,
+  currentUserHasAnyListingsFetched: false,
   currentUserHasAnyListingsError: null,
   currentUserNotificationCount: 0,
   currentUserNotificationCountError: null,
@@ -116,9 +117,17 @@ export default function reducer(state = initialState, action = {}) {
       return { ...state, currentUserHasListingsError: payload };
 
     case FETCH_CURRENT_USER_HAS_ANY_LISTINGS_REQUEST:
-      return { ...state, currentUserHasAnyListingsError: null };
+      return {
+        ...state,
+        currentUserHasAnyListingsFetched: false,
+        currentUserHasAnyListingsError: null
+      };
     case FETCH_CURRENT_USER_HAS_ANY_LISTINGS_SUCCESS:
-      return { ...state, currentUserHasAnyListings: payload.hasListings };
+      return {
+        ...state,
+        currentUserHasAnyListings: payload.hasListings,
+        currentUserHasAnyListingsFetched: true,
+      };
     case FETCH_CURRENT_USER_HAS_ANY_LISTINGS_ERROR:
       console.error(payload); // eslint-disable-line
       return { ...state, currentUserHasAnyListingsError: payload };

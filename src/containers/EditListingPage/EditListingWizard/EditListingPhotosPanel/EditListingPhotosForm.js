@@ -163,6 +163,7 @@ export const EditListingPhotosForm = props => {
         const {
           form,
           className,
+          currentUser,
           fetchErrors,
           handleSubmit,
           invalid,
@@ -180,6 +181,7 @@ export const EditListingPhotosForm = props => {
 
         const images = values.images;
         const { aspectWidth = 1, aspectHeight = 1, variantPrefix } = listingImageConfig;
+        const userRole = currentUser?.attributes?.profile?.publicData?.userType || 'employer';
 
         const { publishListingError, showListingsError, updateListingError, uploadImageError } =
           fetchErrors || {};
@@ -275,7 +277,12 @@ export const EditListingPhotosForm = props => {
             />
 
             <p className={css.tip}>
-              <FormattedMessage id="EditListingPhotosForm.addImagesTip" />
+              <FormattedMessage
+                id={ userRole === "employer" ?
+                  "EditListingPhotosForm.addJobImagesTip" :
+                  "EditListingPhotosForm.addProfileImagesTip"
+                }
+              />
             </p>
 
             <PublishListingError error={publishListingError} />

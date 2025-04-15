@@ -111,7 +111,7 @@ const tabsForInquiryProcess = (processTabs, listingTypeConfig) => {
  * @param {boolean} isNewListingFlow
  * @param {string} processName
  */
-const tabLabelAndSubmit = (intl, tab, isNewListingFlow, isPriceDisabled, processName) => {
+const tabLabelAndSubmit = (intl, tab, isNewListingFlow, isPriceDisabled, processName, userRole) => {
   const processNameString = isNewListingFlow ? `${processName}.` : '';
   const newOrEdit = isNewListingFlow ? 'new' : 'edit';
 
@@ -633,6 +633,8 @@ class EditListingWizard extends Component {
       return <NamedRedirect name="EditListingPage" params={pathParams} />;
     }
 
+    const userRole = currentUser?.attributes?.profile?.publicData?.userType || 'employer';
+
     return (
       <div className={classes}>
         <Tabs
@@ -646,7 +648,8 @@ class EditListingWizard extends Component {
               tab,
               isNewListingFlow,
               isPriceDisabled,
-              processName
+              processName,
+              userRole
             );
             return (
               <EditListingWizardTab
