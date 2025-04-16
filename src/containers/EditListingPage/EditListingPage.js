@@ -131,6 +131,8 @@ export const EditListingPageComponent = props => {
   const intl = useIntl();
   const {
     currentUser,
+    currentUserHasAnyListings,
+    currentUserHasAnyListingsFetched,
     createStripeAccountError,
     fetchInProgress,
     fetchStripeAccountError,
@@ -158,6 +160,14 @@ export const EditListingPageComponent = props => {
     stripeAccount,
     updateStripeAccountError,
   } = props;
+
+  const userRole = currentUser?.attributes?.profile?.publicData?.userType;
+  const talentProfileExists = userRole === 'talent' &&
+    currentUserHasAnyListingsFetched && currentUserHasAnyListings;
+
+  if( talentProfileExists ){
+    return <NamedRedirect name="ProfilePage" params={{ id: currentUser?.id?.uuid }} />;
+  }
 
   const { id, type, returnURLType } = params;
   const isNewURI = type === LISTING_PAGE_PARAM_TYPE_NEW;
@@ -341,6 +351,9 @@ const mapStateToProps = state => {
     stripeAccount,
     stripeAccountFetched,
   } = state.stripeConnectAccount;
+  const {
+    currentUser, currentUserHasAnyListings, currentUserHasAnyListingsFetched
+  } = state.user;
 
   const getOwnListing = id => {
     const listings = getMarketplaceEntities(state, [{ id, type: 'ownListing' }]);
@@ -355,7 +368,9 @@ const mapStateToProps = state => {
     fetchStripeAccountError,
     stripeAccount,
     stripeAccountFetched,
-    currentUser: state.user.currentUser,
+    currentUser,
+    currentUserHasAnyListings,
+    currentUserHasAnyListingsFetched,
     fetchInProgress: createStripeAccountInProgress,
     getOwnListing,
     page,
