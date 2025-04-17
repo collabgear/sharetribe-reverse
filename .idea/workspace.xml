@@ -1,0 +1,1272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2f11e46d-66cb-4525-9389-e70e096048c6" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-delivery-reminder/hire-delivery-reminder-html.html" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-delivery-reminder/hire-delivery-reminder-html.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-delivery-reminder/hire-delivery-reminder-subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-delivery-reminder/hire-delivery-reminder-subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-delivery-time-expired-customer/hire-delivery-time-expired-customer-html.html" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-delivery-time-expired-customer/hire-delivery-time-expired-customer-html.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-delivery-time-expired-customer/hire-delivery-time-expired-customer-subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-delivery-time-expired-customer/hire-delivery-time-expired-customer-subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-delivery-time-expired-provider/hire-delivery-time-expired-provider-html.html" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-delivery-time-expired-provider/hire-delivery-time-expired-provider-html.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-delivery-time-expired-provider/hire-delivery-time-expired-provider-subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-delivery-time-expired-provider/hire-delivery-time-expired-provider-subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-mark-order-received-reminder/hire-mark-order-received-reminder-html.html" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-mark-order-received-reminder/hire-mark-order-received-reminder-html.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-mark-order-received-reminder/hire-mark-order-received-reminder-subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-mark-order-received-reminder/hire-mark-order-received-reminder-subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-new-order/hire-new-order-html.html" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-new-order/hire-new-order-html.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-new-order/hire-new-order-subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-new-order/hire-new-order-subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-auto-canceled-from-disputed-customer/hire-order-auto-canceled-from-disputed-customer-html.html" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-auto-canceled-from-disputed-customer/hire-order-auto-canceled-from-disputed-customer-html.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-auto-canceled-from-disputed-customer/hire-order-auto-canceled-from-disputed-customer-subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-auto-canceled-from-disputed-customer/hire-order-auto-canceled-from-disputed-customer-subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-auto-canceled-from-disputed-provider/hire-order-auto-canceled-from-disputed-provider-html.html" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-auto-canceled-from-disputed-provider/hire-order-auto-canceled-from-disputed-provider-html.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-auto-canceled-from-disputed-provider/hire-order-auto-canceled-from-disputed-provider-subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-auto-canceled-from-disputed-provider/hire-order-auto-canceled-from-disputed-provider-subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-auto-marked-as-received-customer/hire-order-auto-marked-as-received-customer-html.html" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-auto-marked-as-received-customer/hire-order-auto-marked-as-received-customer-html.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-auto-marked-as-received-customer/hire-order-auto-marked-as-received-customer-subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-auto-marked-as-received-customer/hire-order-auto-marked-as-received-customer-subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-auto-marked-as-received-provider/hire-order-auto-marked-as-received-provider-html.html" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-auto-marked-as-received-provider/hire-order-auto-marked-as-received-provider-html.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-auto-marked-as-received-provider/hire-order-auto-marked-as-received-provider-subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-auto-marked-as-received-provider/hire-order-auto-marked-as-received-provider-subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-canceled-from-disputed-customer/hire-order-canceled-from-disputed-customer-html.html" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-canceled-from-disputed-customer/hire-order-canceled-from-disputed-customer-html.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-canceled-from-disputed-customer/hire-order-canceled-from-disputed-customer-subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-canceled-from-disputed-customer/hire-order-canceled-from-disputed-customer-subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-canceled-from-disputed-provider/hire-order-canceled-from-disputed-provider-html.html" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-canceled-from-disputed-provider/hire-order-canceled-from-disputed-provider-html.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-canceled-from-disputed-provider/hire-order-canceled-from-disputed-provider-subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-canceled-from-disputed-provider/hire-order-canceled-from-disputed-provider-subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-canceled-to-customer/hire-order-canceled-to-customer-html.html" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-canceled-to-customer/hire-order-canceled-to-customer-html.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-canceled-to-customer/hire-order-canceled-to-customer-subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-canceled-to-customer/hire-order-canceled-to-customer-subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-canceled-to-provider/hire-order-canceled-to-provider-html.html" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-canceled-to-provider/hire-order-canceled-to-provider-html.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-canceled-to-provider/hire-order-canceled-to-provider-subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-canceled-to-provider/hire-order-canceled-to-provider-subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-disputed/hire-order-disputed-html.html" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-disputed/hire-order-disputed-html.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-disputed/hire-order-disputed-subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-disputed/hire-order-disputed-subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-marked-as-delivered/hire-order-marked-as-delivered-html.html" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-marked-as-delivered/hire-order-marked-as-delivered-html.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-marked-as-delivered/hire-order-marked-as-delivered-subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-marked-as-delivered/hire-order-marked-as-delivered-subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-marked-as-received/hire-order-marked-as-received-html.html" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-marked-as-received/hire-order-marked-as-received-html.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-marked-as-received/hire-order-marked-as-received-subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-marked-as-received/hire-order-marked-as-received-subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-operator-disputed/hire-order-operator-disputed-html.html" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-operator-disputed/hire-order-operator-disputed-html.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-operator-disputed/hire-order-operator-disputed-subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-operator-disputed/hire-order-operator-disputed-subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-operator-marked-as-delivered/hire-order-operator-marked-as-delivered-html.html" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-operator-marked-as-delivered/hire-order-operator-marked-as-delivered-html.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-operator-marked-as-delivered/hire-order-operator-marked-as-delivered-subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-operator-marked-as-delivered/hire-order-operator-marked-as-delivered-subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-receipt/hire-order-receipt-html.html" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-receipt/hire-order-receipt-html.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-receipt/hire-order-receipt-subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-receipt/hire-order-receipt-subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-received-from-disputed-customer/hire-order-received-from-disputed-customer-html.html" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-received-from-disputed-customer/hire-order-received-from-disputed-customer-html.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-received-from-disputed-customer/hire-order-received-from-disputed-customer-subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-received-from-disputed-customer/hire-order-received-from-disputed-customer-subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-received-from-disputed-provider/hire-order-received-from-disputed-provider-html.html" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-received-from-disputed-provider/hire-order-received-from-disputed-provider-html.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-received-from-disputed-provider/hire-order-received-from-disputed-provider-subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-received-from-disputed-provider/hire-order-received-from-disputed-provider-subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-review-by-customer-wanted/hire-order-review-by-customer-wanted-html.html" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-review-by-customer-wanted/hire-order-review-by-customer-wanted-html.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-review-by-customer-wanted/hire-order-review-by-customer-wanted-subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-review-by-customer-wanted/hire-order-review-by-customer-wanted-subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-review-by-provider-wanted/hire-order-review-by-provider-wanted-html.html" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-review-by-provider-wanted/hire-order-review-by-provider-wanted-html.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-review-by-provider-wanted/hire-order-review-by-provider-wanted-subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-review-by-provider-wanted/hire-order-review-by-provider-wanted-subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-review-by-other-party-published/hire-review-by-other-party-published-html.html" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-review-by-other-party-published/hire-review-by-other-party-published-html.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-review-by-other-party-published/hire-review-by-other-party-published-subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-review-by-other-party-published/hire-review-by-other-party-published-subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-review-by-other-party-unpublished/hire-review-by-other-party-unpublished-html.html" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-review-by-other-party-unpublished/hire-review-by-other-party-unpublished-html.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-review-by-other-party-unpublished/hire-review-by-other-party-unpublished-subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-review-by-other-party-unpublished/hire-review-by-other-party-unpublished-subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-purchase/process.edn" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-purchase/process.edn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-purchase/purchase-accepted-application/purchase-accepted-application-html.html" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-purchase/templates/purchase-accepted-application/purchase-accepted-application-html.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-purchase/purchase-accepted-application/purchase-accepted-application-subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-purchase/templates/purchase-accepted-application/purchase-accepted-application-subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-purchase/purchase-declined-application/purchase-declined-application-html.html" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-purchase/templates/purchase-declined-application/purchase-declined-application-html.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-purchase/purchase-declined-application/purchase-declined-application-subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-purchase/templates/purchase-declined-application/purchase-declined-application-subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-purchase/purchase-new-application/purchase-new-application-html.html" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-purchase/templates/purchase-new-application/purchase-new-application-html.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-purchase/purchase-new-application/purchase-new-application-subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-purchase/templates/purchase-new-application/purchase-new-application-subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-purchase/purchase-new-inquiry/purchase-new-inquiry-html.html" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-purchase/templates/purchase-new-inquiry/purchase-new-inquiry-html.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ext/transaction-processes/default-purchase/purchase-new-inquiry/purchase-new-inquiry-subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ext/transaction-processes/default-purchase/templates/purchase-new-inquiry/purchase-new-inquiry-subject.txt" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="purchase-accepted-application-html.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-purchase/templates/purchase-accepted-application/purchase-accepted-application-html.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="410">
+              <caret line="214" column="144" selection-start-line="214" selection-start-column="144" selection-end-line="214" selection-end-column="144" />
+              <folding>
+                <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+                <element signature="e#84#90#1" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+                <element signature="e#67#73#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="purchase-new-inquiry-html.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-purchase/templates/purchase-new-inquiry/purchase-new-inquiry-html.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="16" column="112" selection-start-line="16" selection-start-column="112" selection-end-line="16" selection-end-column="112" />
+              <folding>
+                <element signature="n#style#0;n#h1#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+                <element signature="e#84#90#1" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+                <element signature="e#67#73#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="purchase-new-inquiry-subject.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-purchase/templates/purchase-new-inquiry/purchase-new-inquiry-subject.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="purchase-accepted-application-subject.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-purchase/templates/purchase-accepted-application/purchase-accepted-application-subject.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="110" selection-start-column="110" selection-end-column="110" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="purchase-new-application-html.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-purchase/templates/purchase-new-application/purchase-new-application-html.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="684">
+              <caret line="138" column="111" selection-start-line="138" selection-start-column="111" selection-end-line="138" selection-end-column="111" />
+              <folding>
+                <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+                <element signature="e#84#90#1" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+                <element signature="e#67#73#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="purchase-new-application-subject.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-purchase/templates/purchase-new-application/purchase-new-application-subject.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="64" selection-start-column="64" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="purchase-declined-application-html.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-purchase/templates/purchase-declined-application/purchase-declined-application-html.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="532">
+              <caret line="28" column="25" lean-forward="true" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+              <folding>
+                <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+                <element signature="e#84#90#1" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+                <element signature="e#67#73#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="purchase-declined-application-subject.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-purchase/templates/purchase-declined-application/purchase-declined-application-subject.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="114" selection-start-column="114" selection-end-column="114" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hire-review-by-other-party-unpublished-html.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-review-by-other-party-unpublished/hire-review-by-other-party-unpublished-html.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="779">
+              <caret line="41" column="7" lean-forward="true" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
+              <folding>
+                <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+                <element signature="e#84#90#1" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+                <element signature="e#67#73#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hire-review-by-other-party-unpublished-subject.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-review-by-other-party-unpublished/hire-review-by-other-party-unpublished-subject.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="64" selection-start-column="64" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Apply now</find>
+      <find>OrderPanel.ctaButtonMessagePurchase</find>
+      <find>EditListingWizardTab</find>
+      <find>freelancer-</find>
+      <find>'this.sta</find>
+      <find>EditListingDetailsForm</find>
+      <find>listingTypeSelect</find>
+      <find>You won't be charged yet</find>
+      <find>intl.formatMessage</find>
+      <find>NamedRedirect name=&quot;New</find>
+      <find>Tip: Upload the best 2-3 photos from different angles and with a good quality.</find>
+      <find>EditListingPhotosForm.addImagesTip</find>
+      <find>EditListingDetailsPanel</find>
+      <find>current</find>
+      <find>EditListingPhotosForm</find>
+      <find>EditListingPhotosPanel</find>
+      <find>submitbutt</find>
+      <find>userRo</find>
+      <find>EditListingWizard.tabLabelPhotos</find>
+      <find>EditListingWizard.</find>
+      <find>Inquiry</find>
+      <find>currentUser?.attributes?.profile?.publicData?.userType</find>
+      <find>Find</find>
+      <find>NewListing</find>
+      <find>HasAnyListings</find>
+      <find>currentUser</find>
+      <find>NamedRedir</find>
+      <find>NamedRedirect</find>
+      <find>&lt;NamedRedirect name=&quot;ProfilePage&quot;</find>
+      <find>inquire</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-mark-order-received-reminder/hire-mark-order-received-reminder-subject.txt" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-new-order/hire-new-order-html.html" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-new-order/hire-new-order-subject.txt" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-auto-canceled-from-disputed-customer/hire-order-auto-canceled-from-disputed-customer-html.html" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-auto-canceled-from-disputed-customer/hire-order-auto-canceled-from-disputed-customer-subject.txt" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-auto-canceled-from-disputed-provider/hire-order-auto-canceled-from-disputed-provider-html.html" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-auto-canceled-from-disputed-provider/hire-order-auto-canceled-from-disputed-provider-subject.txt" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-auto-marked-as-received-customer/hire-order-auto-marked-as-received-customer-html.html" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-auto-marked-as-received-customer/hire-order-auto-marked-as-received-customer-subject.txt" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-auto-marked-as-received-provider/hire-order-auto-marked-as-received-provider-html.html" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-auto-marked-as-received-provider/hire-order-auto-marked-as-received-provider-subject.txt" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-canceled-from-disputed-customer/hire-order-canceled-from-disputed-customer-html.html" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-canceled-from-disputed-customer/hire-order-canceled-from-disputed-customer-subject.txt" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-canceled-from-disputed-provider/hire-order-canceled-from-disputed-provider-html.html" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-canceled-from-disputed-provider/hire-order-canceled-from-disputed-provider-subject.txt" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-canceled-to-customer/hire-order-canceled-to-customer-html.html" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-canceled-to-customer/hire-order-canceled-to-customer-subject.txt" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-canceled-to-provider/hire-order-canceled-to-provider-html.html" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-canceled-to-provider/hire-order-canceled-to-provider-subject.txt" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-disputed/hire-order-disputed-html.html" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-disputed/hire-order-disputed-subject.txt" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-marked-as-delivered/hire-order-marked-as-delivered-html.html" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-marked-as-delivered/hire-order-marked-as-delivered-subject.txt" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-marked-as-received/hire-order-marked-as-received-html.html" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-marked-as-received/hire-order-marked-as-received-subject.txt" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-operator-disputed/hire-order-operator-disputed-html.html" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-operator-disputed/hire-order-operator-disputed-subject.txt" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-operator-marked-as-delivered/hire-order-operator-marked-as-delivered-html.html" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-operator-marked-as-delivered/hire-order-operator-marked-as-delivered-subject.txt" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-receipt/hire-order-receipt-html.html" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-receipt/hire-order-receipt-subject.txt" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-received-from-disputed-customer/hire-order-received-from-disputed-customer-html.html" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-received-from-disputed-customer/hire-order-received-from-disputed-customer-subject.txt" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-received-from-disputed-provider/hire-order-received-from-disputed-provider-html.html" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-received-from-disputed-provider/hire-order-received-from-disputed-provider-subject.txt" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-review-by-customer-wanted/hire-order-review-by-customer-wanted-html.html" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-review-by-customer-wanted/hire-order-review-by-customer-wanted-subject.txt" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-review-by-provider-wanted/hire-order-review-by-provider-wanted-html.html" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-review-by-provider-wanted/hire-order-review-by-provider-wanted-subject.txt" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-review-by-other-party-published/hire-review-by-other-party-published-html.html" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-review-by-other-party-published/hire-review-by-other-party-published-subject.txt" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-review-by-other-party-unpublished/hire-review-by-other-party-unpublished-html.html" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-review-by-other-party-unpublished/hire-review-by-other-party-unpublished-subject.txt" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-purchase/templates/purchase-accepted-application/purchase-accepted-application-html.html" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-purchase/templates/purchase-accepted-application/purchase-accepted-application-subject.txt" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-purchase/templates/purchase-declined-application/purchase-declined-application-html.html" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-purchase/templates/purchase-declined-application/purchase-declined-application-subject.txt" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-purchase/templates/purchase-new-application/purchase-new-application-html.html" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-purchase/templates/purchase-new-application/purchase-new-application-subject.txt" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-purchase/templates/purchase-new-inquiry/purchase-new-inquiry-html.html" />
+        <option value="$PROJECT_DIR$/ext/transaction-processes/default-purchase/templates/purchase-new-inquiry/purchase-new-inquiry-subject.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="27" />
+    <option name="width" value="2550" />
+    <option name="height" value="1413" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-hire" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-hire" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-hire" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="hire-delivery-reminder" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-hire" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="hire-delivery-time-expired-customer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-hire" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="hire-delivery-time-expired-provider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-hire" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="hire-mark-order-received-reminder" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-hire" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="hire-new-order" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-hire" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="hire-order-auto-canceled-from-disputed-customer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-hire" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="hire-order-auto-canceled-from-disputed-provider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-hire" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="hire-order-auto-marked-as-received-customer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-hire" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="hire-order-auto-marked-as-received-provider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-hire" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="hire-order-canceled-from-disputed-customer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-hire" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="hire-order-canceled-from-disputed-provider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-hire" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="hire-order-canceled-to-customer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-hire" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="hire-order-canceled-to-provider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-hire" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="hire-order-disputed" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-hire" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="hire-order-marked-as-delivered" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-hire" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="hire-order-marked-as-received" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-hire" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="hire-order-operator-disputed" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-hire" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="hire-order-operator-marked-as-delivered" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-hire" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="hire-order-receipt" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-hire" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="hire-order-received-from-disputed-customer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-hire" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="hire-order-received-from-disputed-provider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-hire" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="hire-order-review-by-customer-wanted" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-hire" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="hire-order-review-by-provider-wanted" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-hire" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="hire-review-by-other-party-published" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-hire" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="hire-review-by-other-party-unpublished" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-inquiry" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-purchase" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-purchase" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-purchase" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="purchase-accepted-application" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-purchase" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="purchase-declined-application" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-purchase" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="purchase-new-application" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="ext" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction-processes" type="462c0819:PsiDirectoryNode" />
+              <item name="default-purchase" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="purchase-new-inquiry" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sharetribe-reverse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharetribe-reverse" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
+              <item name="SearchPage" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="user&#9;FILE&#9;file:///home/collabgear/WebstormProjects/collabgear/sharetribe-reverse/src/ducks/user.duck.js&#10;ProductOrderF&#9;FILE&#9;file:///home/collabgear/WebstormProjects/collabgear/sharetribe-reverse/src/components/OrderPanel/ProductOrderForm/ProductOrderForm.js&#10;EditListingDet&#9;FILE&#9;file:///home/collabgear/WebstormProjects/collabgear/sharetribe-reverse/src/containers/EditListingPage/EditListingWizard/EditListingDetailsPanel/EditListingDetailsForm.js&#10;ProductOrder&#9;FILE&#9;file:///home/collabgear/WebstormProjects/collabgear/sharetribe-reverse/src/components/OrderPanel/ProductOrderForm/ProductOrderForm.js&#10;SearchPage&#9;FILE&#9;file:///home/collabgear/WebstormProjects/collabgear/sharetribe-reverse/src/containers/SearchPage/SearchPageWithGrid.js&#10;Route&#9;FILE&#9;file:///home/collabgear/WebstormProjects/collabgear/sharetribe-reverse/src/routing/Routes.js&#10;routeConfi&#9;FILE&#9;file:///home/collabgear/WebstormProjects/collabgear/sharetribe-reverse/src/routing/routeConfiguration.js&#10;user.du&#9;FILE&#9;file:///home/collabgear/WebstormProjects/collabgear/sharetribe-reverse/src/ducks/user.duck.js&#10;MenuContent&#9;FILE&#9;file:///home/collabgear/WebstormProjects/collabgear/sharetribe-reverse/src/components/MenuContent/MenuContent.js&#10;en.js&#9;FILE&#9;file:///home/collabgear/WebstormProjects/collabgear/sharetribe-reverse/src/translations/en.json&#10;route&#9;FILE&#9;file:///home/collabgear/WebstormProjects/collabgear/sharetribe-reverse/src/routing/routeConfiguration.js&#10;TopbarSearchForm&#9;FILE&#9;file:///home/collabgear/WebstormProjects/collabgear/sharetribe-reverse/src/containers/TopbarContainer/Topbar/TopbarSearchForm/TopbarSearchForm.js" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ext/transaction-processes/default-purchase/templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ext/transaction-processes/default-purchase" />
+      <recent name="$PROJECT_DIR$/ext/transaction-processes" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2f11e46d-66cb-4525-9389-e70e096048c6" name="Default" comment="" />
+      <created>1743318776492</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1743318776492</updated>
+      <workItem from="1743318777584" duration="3189000" />
+      <workItem from="1743673660842" duration="7335000" />
+      <workItem from="1744031176149" duration="21844000" />
+      <workItem from="1744291361466" duration="9420000" />
+      <workItem from="1744640808312" duration="20130000" />
+      <workItem from="1744866971033" duration="7219000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="69137000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="27" width="2560" height="1413" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.3294753" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-mark-order-received-reminder/hire-mark-order-received-reminder-subject.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="64" selection-start-column="64" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-new-order/hire-new-order-html.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="139" column="23" lean-forward="true" selection-start-line="139" selection-start-column="23" selection-end-line="139" selection-end-column="23" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#84#90#1" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#67#73#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-new-order/hire-new-order-subject.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="64" selection-start-column="64" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-auto-canceled-from-disputed-customer/hire-order-auto-canceled-from-disputed-customer-html.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="40" column="7" lean-forward="true" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#84#90#1" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#67#73#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-auto-canceled-from-disputed-customer/hire-order-auto-canceled-from-disputed-customer-subject.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="64" selection-start-column="64" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-auto-canceled-from-disputed-provider/hire-order-auto-canceled-from-disputed-provider-html.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="95" selection-start-line="17" selection-start-column="95" selection-end-line="17" selection-end-column="95" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#84#90#1" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#67#73#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-auto-canceled-from-disputed-provider/hire-order-auto-canceled-from-disputed-provider-subject.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="64" selection-start-column="64" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-auto-marked-as-received-customer/hire-order-auto-marked-as-received-customer-html.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="150" selection-start-line="17" selection-start-column="136" selection-end-line="17" selection-end-column="150" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#84#90#1" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#67#73#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-auto-marked-as-received-customer/hire-order-auto-marked-as-received-customer-subject.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="64" selection-start-column="64" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-auto-marked-as-received-provider/hire-order-auto-marked-as-received-provider-html.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="116" column="144" selection-start-line="116" selection-start-column="144" selection-end-line="116" selection-end-column="144" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#84#90#1" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#67#73#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-auto-marked-as-received-provider/hire-order-auto-marked-as-received-provider-subject.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="64" selection-start-column="64" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-canceled-from-disputed-customer/hire-order-canceled-from-disputed-customer-html.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="95" selection-start-line="16" selection-start-column="95" selection-end-line="16" selection-end-column="95" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#84#90#1" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#67#73#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-canceled-from-disputed-customer/hire-order-canceled-from-disputed-customer-subject.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="64" selection-start-column="64" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-canceled-from-disputed-provider/hire-order-canceled-from-disputed-provider-html.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="95" selection-start-line="17" selection-start-column="95" selection-end-line="17" selection-end-column="95" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#84#90#1" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#67#73#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-canceled-from-disputed-provider/hire-order-canceled-from-disputed-provider-subject.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="64" selection-start-column="64" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-canceled-to-customer/hire-order-canceled-to-customer-html.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="95" selection-start-line="17" selection-start-column="95" selection-end-line="17" selection-end-column="95" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#84#90#1" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#67#73#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-canceled-to-customer/hire-order-canceled-to-customer-subject.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="64" selection-start-column="64" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-canceled-to-provider/hire-order-canceled-to-provider-html.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="95" selection-start-line="17" selection-start-column="95" selection-end-line="17" selection-end-column="95" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#84#90#1" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#67#73#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-canceled-to-provider/hire-order-canceled-to-provider-subject.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="64" selection-start-column="64" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-disputed/hire-order-disputed-html.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="95" selection-start-line="18" selection-start-column="95" selection-end-line="18" selection-end-column="95" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#84#90#1" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#67#73#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-disputed/hire-order-disputed-subject.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="64" selection-start-column="64" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-marked-as-delivered/hire-order-marked-as-delivered-html.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="100" selection-start-line="19" selection-start-column="100" selection-end-line="19" selection-end-column="100" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#84#90#1" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#67#73#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-marked-as-delivered/hire-order-marked-as-delivered-subject.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="172" selection-start-column="172" selection-end-column="172" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-marked-as-received/hire-order-marked-as-received-html.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="115" column="144" selection-start-line="115" selection-start-column="144" selection-end-line="115" selection-end-column="144" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#84#90#1" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#67#73#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-marked-as-received/hire-order-marked-as-received-subject.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="64" selection-start-column="64" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-operator-disputed/hire-order-operator-disputed-html.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="95" selection-start-line="17" selection-start-column="95" selection-end-line="17" selection-end-column="95" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#84#90#1" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#67#73#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-operator-disputed/hire-order-operator-disputed-subject.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="64" selection-start-column="64" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-operator-marked-as-delivered/hire-order-operator-marked-as-delivered-html.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="95" selection-start-line="19" selection-start-column="95" selection-end-line="19" selection-end-column="95" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#84#90#1" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#67#73#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-operator-marked-as-delivered/hire-order-operator-marked-as-delivered-subject.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="183" selection-start-column="183" selection-end-column="183" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-receipt/hire-order-receipt-html.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="114" column="144" selection-start-line="114" selection-start-column="144" selection-end-line="114" selection-end-column="144" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#84#90#1" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#67#73#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-receipt/hire-order-receipt-subject.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="64" selection-start-column="64" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-received-from-disputed-customer/hire-order-received-from-disputed-customer-html.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#84#90#1" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#67#73#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-received-from-disputed-customer/hire-order-received-from-disputed-customer-subject.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="64" selection-start-column="64" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-received-from-disputed-provider/hire-order-received-from-disputed-provider-html.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="115" column="144" selection-start-line="115" selection-start-column="144" selection-end-line="115" selection-end-column="144" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#84#90#1" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#67#73#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-received-from-disputed-provider/hire-order-received-from-disputed-provider-subject.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="64" selection-start-column="64" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-review-by-customer-wanted/hire-order-review-by-customer-wanted-html.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="95" selection-start-line="16" selection-start-column="95" selection-end-line="16" selection-end-column="95" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#84#90#1" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#67#73#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-review-by-customer-wanted/hire-order-review-by-customer-wanted-subject.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="64" selection-start-column="64" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-review-by-provider-wanted/hire-order-review-by-provider-wanted-html.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="95" selection-start-line="16" selection-start-column="95" selection-end-line="16" selection-end-column="95" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#84#90#1" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#67#73#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-order-review-by-provider-wanted/hire-order-review-by-provider-wanted-subject.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="64" selection-start-column="64" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-review-by-other-party-published/hire-review-by-other-party-published-html.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="95" selection-start-line="19" selection-start-column="95" selection-end-line="19" selection-end-column="95" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#84#90#1" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#67#73#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-review-by-other-party-published/hire-review-by-other-party-published-subject.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="64" selection-start-column="64" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-review-by-other-party-unpublished/hire-review-by-other-party-unpublished-html.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="41" column="7" lean-forward="true" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#84#90#1" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#67#73#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-hire/templates/hire-review-by-other-party-unpublished/hire-review-by-other-party-unpublished-subject.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="64" selection-start-column="64" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-purchase/templates/purchase-accepted-application/purchase-accepted-application-html.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="214" column="144" selection-start-line="214" selection-start-column="144" selection-end-line="214" selection-end-column="144" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#84#90#1" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#67#73#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-purchase/templates/purchase-accepted-application/purchase-accepted-application-subject.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="110" selection-start-column="110" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-purchase/templates/purchase-declined-application/purchase-declined-application-html.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="28" column="25" lean-forward="true" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#84#90#1" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#67#73#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-purchase/templates/purchase-declined-application/purchase-declined-application-subject.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="114" selection-start-column="114" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-purchase/templates/purchase-new-application/purchase-new-application-subject.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="64" selection-start-column="64" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-purchase/templates/purchase-new-application/purchase-new-application-html.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="138" column="111" selection-start-line="138" selection-start-column="111" selection-end-line="138" selection-end-column="111" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#84#90#1" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#67#73#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-purchase/templates/purchase-new-inquiry/purchase-new-inquiry-html.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="112" selection-start-line="16" selection-start-column="112" selection-end-line="16" selection-end-column="112" />
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#td#0;n#tr#0;n#table#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#84#90#1" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
+            <element signature="e#67#73#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/transaction-processes/default-purchase/templates/purchase-new-inquiry/purchase-new-inquiry-subject.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

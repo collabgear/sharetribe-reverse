@@ -46,7 +46,6 @@
    :on :transition/apply-for-job-after-inquiry,
       :to :actor.role/provider,
       :template :purchase-new-application}
-
   {:name :notification/job-application-accepted,
    :on :transition/approve-application,
       :to :actor.role/customer,

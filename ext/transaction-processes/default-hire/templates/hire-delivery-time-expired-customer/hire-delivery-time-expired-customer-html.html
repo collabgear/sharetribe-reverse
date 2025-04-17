@@ -13,9 +13,9 @@
           <table align="center" role="presentation" cellSpacing="0" cellPadding="0" border="0" width="100%" style="max-width:600px;margin:0 auto">
             <tr style="width:100%">
               <td>
-                <h1 style="color:#484848;font-size:26px;line-height:1.3;font-weight:700">{{t "PurchaseShippingTimeExpiredCustomer.Title" "Your order was automatically canceled"}}</h1>
+                <h1 style="color:#484848;font-size:26px;line-height:1.3;font-weight:700">{{t "HireDeliveryTimeExpiredCustomer.Title" "Your order was automatically canceled"}}</h1>
                 {{#eq "shipping" protected-data.deliveryMethod}}
-                <p style="font-size:16px;line-height:1.4;margin:16px 0;color:#484848">{{t "PurchaseShippingTimeExpiredCustomer.ShippingContent" "Your order for {listingTitle} was automatically canceled as {providerDisplayName} did not ship it within two weeks from the original purchase. You will be refunded fully." listingTitle=listing.title providerDisplayName=provider.display-name}}</p>
+                <p style="font-size:16px;line-height:1.4;margin:16px 0;color:#484848">{{t "HireDeliveryTimeExpiredCustomer.DeliveryContent" "Your order for {listingTitle} was automatically canceled as {providerDisplayName} did not deliver it within two weeks from the original purchase. You will be refunded fully." listingTitle=listing.title providerDisplayName=provider.display-name}}</p>
                 {{else}}
                 <p style="font-size:16px;line-height:1.4;margin:16px 0;color:#484848">{{t "PurchaseShippingTimeExpiredCustomer.DeliveryContent" "Your order for {listingTitle} was automatically canceled as {providerDisplayName} did not deliver it within two weeks from the original purchase. You will be refunded fully." listingTitle=listing.title providerDisplayName=provider.display-name}}</p>
                 {{/eq}}
