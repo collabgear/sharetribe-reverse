@@ -73,6 +73,12 @@
   }
 }
 
+.applicationPendingMessage {
+  width: 100%;
+  text-align: center;
+  padding: 0 24px 16px 24px;
+}
+
 .avatarWrapper {
   /* Position (over the listing image)*/
   margin-left: 24px;
@@ -508,6 +514,28 @@
   width: 100%;
   display: flex;
   flex-direction: row;
+
+  @media (--viewportLarge) {
+    flex-direction: column;
+  }
+
+  & button:first-child {
+    margin: 0 12px 0 0;
+
+    @media (--viewportLarge) {
+      margin: 8px 0 0 0;
+
+      /* Switch order in desktop layout with accept button being on the top */
+      order: 1;
+    }
+  }
+}
+
+.applicationButtonWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 16px;
 
   @media (--viewportLarge) {
     flex-direction: column;

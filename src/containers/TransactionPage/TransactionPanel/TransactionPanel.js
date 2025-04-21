@@ -22,6 +22,7 @@ import BookingLocationMaybe from './BookingLocationMaybe';
 import InquiryMessageMaybe from './InquiryMessageMaybe';
 import FeedSection from './FeedSection';
 import ActionButtonsMaybe from './ActionButtonsMaybe';
+import ApplicationButtonsMaybe from './ApplicationButtonsMaybe';
 import DiminishedActionButtonMaybe from './DiminishedActionButtonMaybe';
 import PanelHeading from './PanelHeading';
 
@@ -150,6 +151,7 @@ export class TransactionPanelComponent extends Component {
       rootClassName,
       className,
       currentUser,
+      transactionId,
       transactionRole,
       listing,
       customer,
@@ -172,6 +174,11 @@ export class TransactionPanelComponent extends Component {
       orderPanel,
       config,
       hasViewingRights,
+      isApplicationPending,
+      onTransition,
+      transitionInProgress,
+      transitionError,
+      processStates,
     } = this.props;
 
     const isCustomer = transactionRole === 'customer';
@@ -206,6 +213,34 @@ export class TransactionPanelComponent extends Component {
         isProvider={isProvider}
       />
     );
+
+    const primaryButtonProps = {
+      inProgress: transitionInProgress,
+      buttonText: intl.formatMessage({ id: "TransactionPanel.approveApplicationButton"}),
+      error: transitionError,
+      errorText: intl.formatMessage({ id: "TransactionPanel.approveApplicationError"}),
+      onAction: () => onTransition( transactionId, processStates.APPROVE_APPLICATION, {}),
+    };
+    const secondaryButtonProps = {
+      inProgress: transitionInProgress,
+      buttonText: intl.formatMessage({ id: "TransactionPanel.declineApplicationButton"}),
+      error: transitionError,
+      errorText: intl.formatMessage({ id: "TransactionPanel.declineApplicationError"}),
+      onAction: () => onTransition( transactionId, processStates.DECLINE_APPLICATION, {}),
+    };
+    const applicationButtons = isApplicationPending && isProvider ? (
+      <ApplicationButtonsMaybe
+        showButtons={true}
+        primaryButtonProps={primaryButtonProps}
+        secondaryButtonProps={secondaryButtonProps}
+        isListingDeleted={listingDeleted}
+        isProvider={isProvider}
+      />
+    ) : isApplicationPending && isCustomer ? (
+      <div className={css.applicationPendingMessage}>
+        <FormattedMessage id="TransactionPanel.pendingApplicationNote"/>
+      </div>
+    ) : null;
 
     const listingType = listing?.attributes?.publicData?.listingType;
     const listingTypeConfigs = config.listing.listingTypes;
@@ -385,6 +420,8 @@ export class TransactionPanelComponent extends Component {
                 {stateData.showActionButtons ? (
                   <div className={css.desktopActionButtons}>{actionButtons}</div>
                 ) : null}
+
+                {applicationButtons}
               </div>
               <DiminishedActionButtonMaybe
                 showDispute={stateData.showDispute}

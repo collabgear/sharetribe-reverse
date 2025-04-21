@@ -179,6 +179,10 @@ export const TransactionPageComponent = props => {
     return process ? process.getState(tx) === process.states.PENDING_PAYMENT : null;
   };
 
+  const isTxOnApplicationPending = tx => {
+    return process ? process.getState(tx) === process.states.APPLICATION_PENDING : null;
+  };
+
   const redirectToCheckoutPageWithInitialValues = (initialValues, currentListing) => {
     // Customize checkout page state with current listing and selected bookingDates
     const { setInitialValues } = findRouteByRouteName('CheckoutPage', routeConfiguration);
@@ -491,6 +495,11 @@ export const TransactionPageComponent = props => {
         />
       }
       isInquiryProcess={processName === INQUIRY_PROCESS_NAME}
+      isApplicationPending={isTxOnApplicationPending( transaction )}
+      onTransition={onTransition}
+      transitionInProgress={transitionInProgress}
+      transitionError={transitionError}
+      processStates={process.states}
       config={config}
       {...orderBreakdownMaybe}
       orderPanel={
