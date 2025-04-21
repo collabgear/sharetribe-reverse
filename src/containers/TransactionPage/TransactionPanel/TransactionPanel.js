@@ -178,7 +178,7 @@ export class TransactionPanelComponent extends Component {
       onTransition,
       transitionInProgress,
       transitionError,
-      processStates,
+      processTransitions,
     } = this.props;
 
     const isCustomer = transactionRole === 'customer';
@@ -219,14 +219,14 @@ export class TransactionPanelComponent extends Component {
       buttonText: intl.formatMessage({ id: "TransactionPanel.approveApplicationButton"}),
       error: transitionError,
       errorText: intl.formatMessage({ id: "TransactionPanel.approveApplicationError"}),
-      onAction: () => onTransition( transactionId, processStates.APPROVE_APPLICATION, {}),
+      onAction: () => onTransition( transactionId, processTransitions.APPROVE_APPLICATION, {}),
     };
     const secondaryButtonProps = {
       inProgress: transitionInProgress,
       buttonText: intl.formatMessage({ id: "TransactionPanel.declineApplicationButton"}),
       error: transitionError,
       errorText: intl.formatMessage({ id: "TransactionPanel.declineApplicationError"}),
-      onAction: () => onTransition( transactionId, processStates.DECLINE_APPLICATION, {}),
+      onAction: () => onTransition( transactionId, processTransitions.DECLINE_APPLICATION, {}),
     };
     const applicationButtons = isApplicationPending && isProvider ? (
       <ApplicationButtonsMaybe

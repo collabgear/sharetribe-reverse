@@ -499,7 +499,7 @@ export const TransactionPageComponent = props => {
       onTransition={onTransition}
       transitionInProgress={transitionInProgress}
       transitionError={transitionError}
-      processStates={process.states}
+      processTransitions={process.transitions}
       config={config}
       {...orderBreakdownMaybe}
       orderPanel={
