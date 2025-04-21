@@ -60,6 +60,7 @@ import NotFoundPage from '../NotFoundPage/NotFoundPage';
 
 import {
   sendInquiry,
+  sendJobApplication,
   setInitialValues,
   fetchTimeSlots,
   fetchTransactionLineItems,
@@ -112,6 +113,7 @@ export const ListingPageComponent = props => {
     history,
     callSetInitialValues,
     onSendInquiry,
+    onSendJobApplication,
     onInitializeCardPaymentData,
     config,
     routeConfiguration,
@@ -247,6 +249,7 @@ export const ListingPageComponent = props => {
     callSetInitialValues,
     getListing,
     onInitializeCardPaymentData,
+    onSendJobApplication,
   });
 
   const handleOrderSubmit = values => {
@@ -558,6 +561,8 @@ const mapDispatchToProps = dispatch => ({
   onInitializeCardPaymentData: () => dispatch(initializeCardPaymentData()),
   onFetchTimeSlots: (listingId, start, end, timeZone, options) =>
     dispatch(fetchTimeSlots(listingId, start, end, timeZone, options)), // for OrderPanel
+  onSendJobApplication: ( listing, budgetOffer ) =>
+    dispatch( sendJobApplication( listing, budgetOffer )),
 });
 
 // Note: it is important that the withRouter HOC is **outside** the

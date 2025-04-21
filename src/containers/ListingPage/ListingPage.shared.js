@@ -159,7 +159,18 @@ export const handleSubmitInquiry = parameters => values => {
     });
 };
 
-
+const handleJobApplicationSubmit =
+  ( history, routes, onSendJobApplication, listing, budgetOffer ) =>
+{
+  onSendJobApplication( listing, budgetOffer )
+    .then(txId => {
+      // Redirect to OrderDetailsPage
+      history.push(createResourceLocatorString('OrderDetailsPage', routes, { id: txId.uuid }, {}));
+    })
+    .catch(() => {
+      // Ignore, error handling in duck file
+    });
+};
 
 /**
  * Handle order submit from OrderPanel.
@@ -174,10 +185,18 @@ export const handleSubmit = parameters => values => {
     getListing,
     callSetInitialValues,
     onInitializeCardPaymentData,
+    onSendJobApplication,
     routes,
   } = parameters;
   const listingId = new UUID(params.id);
   const listing = getListing(listingId);
+  const userRole = currentUser?.attributes?.profile?.publicData?.userType;
+
+  if( userRole === 'talent'){
+    return handleJobApplicationSubmit(
+      history, routes, onSendJobApplication, listing, values.budgetOffer
+    );
+  }
 
   const {
     bookingDates,

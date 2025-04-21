@@ -3,9 +3,10 @@ import pick from 'lodash/pick';
 import { types as sdkTypes, createImageVariantConfig } from '../../util/sdkLoader';
 import { storableError } from '../../util/errors';
 import { addMarketplaceEntities } from '../../ducks/marketplaceData.duck';
-import { transactionLineItems } from '../../util/api';
+import { initiatePrivileged, transactionLineItems, transitionPrivileged } from '../../util/api';
 import * as log from '../../util/log';
 import { denormalisedResponseEntities } from '../../util/data';
+import { formatMoney } from '../../util/currency';
 import {
   bookingTimeUnits,
   findNextBoundary,
@@ -25,7 +26,7 @@ import {
 import { getProcess, isBookingProcessAlias } from '../../transactions/transaction';
 import { fetchCurrentUser, fetchCurrentUserHasOrdersSuccess } from '../../ducks/user.duck';
 
-const { UUID } = sdkTypes;
+const { UUID, Money } = sdkTypes;
 const MINUTE_IN_MS = 1000 * 60;
 
 // Day-based time slots queries are cached for 1 minute.
@@ -68,6 +69,10 @@ export const SEND_INQUIRY_REQUEST = 'app/ListingPage/SEND_INQUIRY_REQUEST';
 export const SEND_INQUIRY_SUCCESS = 'app/ListingPage/SEND_INQUIRY_SUCCESS';
 export const SEND_INQUIRY_ERROR = 'app/ListingPage/SEND_INQUIRY_ERROR';
 
+export const SEND_JOB_APPLICATION_REQUEST = 'app/ListingPage/SEND_JOB_APPLICATION_REQUEST';
+export const SEND_JOB_APPLICATION_SUCCESS = 'app/ListingPage/SEND_JOB_APPLICATION_SUCCESS';
+export const SEND_JOB_APPLICATION_ERROR = 'app/ListingPage/SEND_JOB_APPLICATION_ERROR';
+
 // ================ Reducer ================ //
 
 const initialState = {
@@ -97,6 +102,8 @@ const initialState = {
   fetchLineItemsError: null,
   sendInquiryInProgress: false,
   sendInquiryError: null,
+  sendJobApplicationInProgress: false,
+  sendJobApplicationError: null,
   inquiryModalOpenForListingId: null,
 };
 
@@ -206,6 +213,13 @@ const listingPageReducer = (state = initialState, action = {}) => {
     case SEND_INQUIRY_ERROR:
       return { ...state, sendInquiryInProgress: false, sendInquiryError: payload };
 
+    case SEND_JOB_APPLICATION_REQUEST:
+      return { ...state, sendJobApplicationInProgress: true, sendJobApplicationError: null };
+    case SEND_JOB_APPLICATION_SUCCESS:
+      return { ...state, sendJobApplicationInProgress: false };
+    case SEND_JOB_APPLICATION_ERROR:
+      return { ...state, sendJobApplicationInProgress: false, sendJobApplicationError: payload };
+
     default:
       return state;
   }
@@ -281,6 +295,10 @@ export const fetchLineItemsError = error => ({
 export const sendInquiryRequest = () => ({ type: SEND_INQUIRY_REQUEST });
 export const sendInquirySuccess = () => ({ type: SEND_INQUIRY_SUCCESS });
 export const sendInquiryError = e => ({ type: SEND_INQUIRY_ERROR, error: true, payload: e });
+
+export const sendJobApplicationRequest = () => ({ type: SEND_JOB_APPLICATION_REQUEST });
+export const sendJobApplicationSuccess = () => ({ type: SEND_JOB_APPLICATION_SUCCESS });
+export const sendJobApplicationError = e => ({ type: SEND_JOB_APPLICATION_ERROR, error: true, payload: e });
 
 // ================ Thunks ================ //
 
@@ -452,6 +470,68 @@ export const sendInquiry = (listing, message) => (dispatch, getState, sdk) => {
     })
     .catch(e => {
       dispatch(sendInquiryError(storableError(e)));
+      throw e;
+    });
+};
+
+export const sendJobApplication = ( listing, budgetOffer, transactionId = null ) => (dispatch, getState, sdk) => {
+  dispatch(sendJobApplicationRequest());
+  const processAlias = listing?.attributes?.publicData?.transactionProcessAlias;
+  if (!processAlias) {
+    const error = new Error('No transaction process attached to listing');
+    log.error(error, 'listing-process-missing', {
+      listingId: listing?.id?.uuid,
+    });
+    dispatch(sendJobApplicationError(storableError(error)));
+    return Promise.reject(error);
+  }
+
+  const listingId = listing?.id;
+  const [processName, alias] = processAlias.split('/');
+  const transitions = getProcess(processName)?.transitions;
+  // If we already have a transaction ID, we should transition, not
+  // initiate.
+  const isTransition = !!transactionId;
+
+  const currency = listing?.attributes?.price?.currency;
+  const budgetOfferAmount =
+    budgetOffer ? Math.floor( budgetOffer * 100 ) : listing?.attributes?.price?.amount;
+  const formattedBudgetOffer = `${budgetOfferAmount / 100} ${currency}`;
+
+  const bodyParams = isTransition ?
+    {
+      id: transactionId,
+      transition: transitions.APPLY_FOR_JOB_AFTER_INQUIRY,
+      params: {
+        protectedData: {
+          budgetOfferAmount,
+          formattedBudgetOffer,
+        }
+      },
+
+    } : {
+      processAlias,
+      transition: transitions.APPLY_FOR_JOB,
+      params: {
+        listingId,
+        protectedData: {
+          budgetOfferAmount,
+          formattedBudgetOffer,
+        }
+      },
+    };
+
+  const txPromise = isTransition ?
+    sdk.transactions.transition(bodyParams, {}) : sdk.transactions.initiate(bodyParams);
+
+  return txPromise.then(response => {
+      dispatch(sendJobApplicationSuccess());
+      dispatch(fetchCurrentUserHasOrdersSuccess(true));
+
+      return response.data.data.id;
+    })
+    .catch(e => {
+      dispatch(sendJobApplicationError(storableError(e)));
       throw e;
     });
 };

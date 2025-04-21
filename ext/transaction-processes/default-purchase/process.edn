@@ -6,31 +6,27 @@
    :to :state/job-inquiry}
   {:name :transition/apply-for-job,
     :actor :actor.role/customer,
-    :privileged? true,
     :actions
-    [{:name :action/update-protected-data}
-     {:name :action/create-pending-stock-reservation}
-     {:name :action/privileged-set-line-items}],
+    [{:name :action/update-protected-data}],
     :to :state/application-pending}
   {:name :transition/apply-for-job-after-inquiry,
     :actor :actor.role/customer,
-    :privileged? true,
     :actions
-    [{:name :action/update-protected-data}
-     {:name :action/create-pending-stock-reservation}
-     {:name :action/privileged-set-line-items}],
+    [{:name :action/update-protected-data}],
     :from :state/job-inquiry,
     :to :state/application-pending}
   {:name :transition/approve-application,
     :actor :actor.role/provider,
     :actions
-    [{:name :action/accept-stock-reservation}],
+    [
+     {:name :action/create-pending-stock-reservation}
+     {:name :action/accept-stock-reservation}],
     :from :state/application-pending,
     :to :state/application-approved}
   {:name :transition/decline-application,
     :actor :actor.role/provider,
     :actions
-    [{:name :action/decline-stock-reservation}],
+    [],
     :from :state/application-pending,
     :to :state/application-declined}],
  :notifications
